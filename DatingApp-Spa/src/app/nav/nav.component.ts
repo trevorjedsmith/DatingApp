@@ -21,7 +21,9 @@ export class NavComponent implements OnInit {
 
       console.log('Logged in Successfully');
     }, error => {
-
+      console.log(error);
+      const message = `StatusCode: ${error.status}, Message: ${error.error}`;
+      console.log(message);
       console.log('There was an error logging in');
     });
   }
